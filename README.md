@@ -24,7 +24,7 @@ Communicates with a Node.js + Sharp backend to perform processing operations.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### **Frontend**
 
@@ -42,7 +42,7 @@ Communicates with a Node.js + Sharp backend to perform processing operations.
 
 ---
 
-## 📦 Installation
+## Installation
 
 Clone the repository:
 
@@ -78,8 +78,9 @@ Start development server:
 The frontend sends the image as ArrayBuffer:
 
     const response = await axios.post(
-        `http://localhost:3000/upload?op=${operation}&level=${level}`, imageBuffer,
-          { headers: { "Content-Type": "application/octet-stream" },
+        `https://image-processor-backend.onrender.com/upload?op=${operation}&level=${level}`, imageBuffer,
+          { 
+            headers: { "Content-Type": "application/octet-stream" },
     	    responseType: "arraybuffer",
           }
     );
@@ -116,7 +117,7 @@ A download button triggers:
 
 ---
 
-## 🧪 Future Improvements
+## Future Improvements
 
 - Drag-and-drop upload
 - Before/After slider
