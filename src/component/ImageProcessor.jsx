@@ -47,7 +47,7 @@ function ImageProcessor() {
 
       try {
         const response = await axios.post(
-          `https://image-processor-backend.onrender.com/upload?op=${operation}&level=${level}`,
+          `imageprocessorbackend-production.up.railway.app/upload?op=${operation}&level=${level}`,
           imageBuffer,
           {
             headers: { "Content-Type": "application/octet-stream" },
