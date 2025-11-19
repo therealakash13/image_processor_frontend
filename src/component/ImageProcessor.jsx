@@ -47,7 +47,7 @@ function ImageProcessor() {
 
       try {
         const response = await axios.post(
-          `imageprocessorbackend-production.up.railway.app/upload?op=${operation}&level=${level}`,
+          `https://imageprocessorbackend-production.up.railway.app/upload?op=${operation}&level=${level}`,
           imageBuffer,
           {
             headers: { "Content-Type": "application/octet-stream" },
@@ -116,7 +116,8 @@ function ImageProcessor() {
 
         {processedImageUrl && (
           <button className="btn-download" onClick={handleDownload}>
-            Download Processed Image <span className="material-symbols-outlined">download</span>
+            Download Processed Image{" "}
+            <span className="material-symbols-outlined">download</span>
           </button>
         )}
       </div>
